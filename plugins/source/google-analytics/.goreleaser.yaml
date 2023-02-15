@@ -1,0 +1,14 @@
+variables:
+  component: source/google-analytics
+  binary: google-analytics
+
+project_name: plugins/source/google-analytics
+
+monorepo:
+  tag_prefix: plugins-source-google-analytics-
+  dir: plugins/source/google-analytics
+
+includes:
+  - from_file:
+      # Relative to the directory Go Releaser is run from (which is the root of the repository)
+      path: ./plugins/.goreleaser.yaml

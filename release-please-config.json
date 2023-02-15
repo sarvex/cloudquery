@@ -17,6 +17,7 @@
     "plugins/source/gcp": { "component": "plugins-source-gcp" },
     "plugins/source/github": { "component": "plugins-source-github" },
     "plugins/source/gitlab": { "component": "plugins-source-gitlab" },
+    "plugins/source/google-analytics": { "component": "plugins-source-google-analytics" },
     "plugins/source/hackernews": { "component": "plugins-source-hackernews" },
     "plugins/source/heroku": { "component": "plugins-source-heroku" },
     "plugins/source/homebrew": { "component": "plugins-source-homebrew" },
@@ -36,59 +37,24 @@
     "plugins/source/stripe": { "component": "plugins-source-stripe" },
     "plugins/source/tailscale": { "component": "plugins-source-tailscale" },
     "plugins/source/terraform": { "component": "plugins-source-terraform" },
-    "plugins/source/test": { "component": "plugins-source-test" },
-    "plugins/source/vercel": { "component": "plugins-source-vercel" },
-    "plugins/destination/postgresql": {
-      "component": "plugins-destination-postgresql"
-    },
-    "plugins/destination/s3": {
-      "component": "plugins-destination-s3"
-    },
-    "plugins/destination/file": {
-      "component": "plugins-destination-file"
-    },
-    "plugins/destination/firehose": {
-      "component": "plugins-destination-firehose"
-    },
-    "plugins/destination/gcs": {
-      "component": "plugins-destination-gcs"
-    },
-    "plugins/destination/sqlite": {
-      "component": "plugins-destination-sqlite"
-    },
-    "plugins/destination/snowflake": {
-      "component": "plugins-destination-snowflake"
-    },
-    "plugins/destination/bigquery": {
-      "component": "plugins-destination-bigquery"
-    },
-    "plugins/destination/mongodb": {
-      "component": "plugins-destination-mongodb"
-    },
-    "plugins/destination/neo4j": {
-      "component": "plugins-destination-neo4j"
-    },
-    "plugins/destination/azblob": {
-      "component": "plugins-destination-azblob"
-    },
-    "plugins/destination/kafka": {
-      "component": "plugins-destination-kafka"
-    },
-    "plugins/destination/mssql": {
-      "component": "plugins-destination-mssql"
-    },
-    "plugins/destination/mysql": {
-      "component": "plugins-destination-mysql"
-    },
-    "plugins/destination/clickhouse": {
-      "component": "plugins-destination-clickhouse"
-    },
-    "plugins/destination/test": {
-      "component": "plugins-destination-test"
-    },
-    "plugins/destination/elasticsearch": {
-      "component": "plugins-destination-elasticsearch"
-    }
+
+    "plugins/destination/azblob": { "component": "plugins-destination-azblob" },
+    "plugins/destination/bigquery": { "component": "plugins-destination-bigquery" },
+    "plugins/destination/clickhouse": { "component": "plugins-destination-clickhouse" },
+    "plugins/destination/elasticsearch": { "component": "plugins-destination-elasticsearch" }
+    "plugins/destination/file": { "component": "plugins-destination-file" },
+    "plugins/destination/firehose": { "component": "plugins-destination-firehose" },
+    "plugins/destination/gcs": { "component": "plugins-destination-gcs" },
+    "plugins/destination/kafka": { "component": "plugins-destination-kafka" },
+    "plugins/destination/mongodb": { "component": "plugins-destination-mongodb" },
+    "plugins/destination/mssql": { "component": "plugins-destination-mssql" },
+    "plugins/destination/mysql": { "component": "plugins-destination-mysql" },
+    "plugins/destination/neo4j": { "component": "plugins-destination-neo4j" },
+    "plugins/destination/postgresql": { "component": "plugins-destination-postgresql" },
+    "plugins/destination/s3": { "component": "plugins-destination-s3" },
+    "plugins/destination/snowflake": { "component": "plugins-destination-snowflake" },
+    "plugins/destination/sqlite": { "component": "plugins-destination-sqlite" },
+    "plugins/destination/test": { "component": "plugins-destination-test" },
   },
   "tag-separator": "-",
   "separate-pull-requests": true,
