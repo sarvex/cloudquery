@@ -8,13 +8,14 @@ import (
 	"google.golang.org/api/analyticsreporting/v4"
 )
 
-func fetch(tableName string, request *analyticsreporting.ReportRequest) schema.TableResolver {
+func Fetch(tableName string, request *analyticsreporting.ReportRequest) schema.TableResolver {
 	request.HideTotals = true
 	request.HideValueRanges = true
 	request.PageToken = ""
 
 	return func(ctx context.Context, meta schema.ClientMeta, parent *schema.Resource, res chan<- any) error {
 		c := meta.(*client.Client)
+		c.Logger().Info().Msg("started fetch")
 
 		request.ViewId = c.ViewID
 		batchGetReq := c.Reports.BatchGet(
@@ -37,13 +38,26 @@ func fetch(tableName string, request *analyticsreporting.ReportRequest) schema.T
 					return err
 				}
 
-				// TODO: parse header
+				for _, report := range resp.Reports {
+					c.Logger().Info().Bool("golden", report.Data.IsDataGolden).Msg("got report")
+					// prt header
+					h, err := report.ColumnHeader.MarshalJSON()
+					if err != nil {
+						return err
+					}
+					c.Logger().Info().Str("header", string(h)).Msg("got header")
+
+					for _, row := range report.Data.Rows {
+						// prt header
+						r, err := row.MarshalJSON()
+						if err != nil {
+							return err
+						}
+						c.Logger().Info().Str("row", string(r)).Msg("got row")
+					}
+				}
 
 				report := resp.Reports[0]
-
-				for _, row := range report.Data.Rows {
-					// parse row
-				}
 
 				request.PageToken = report.NextPageToken
 				if request.PageToken == "" {

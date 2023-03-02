@@ -6,9 +6,9 @@ import (
 )
 
 type Spec struct {
-	APIKey    string `json:"api_key,omitempty"`
-	ViewID    string `json:"view_id,omitempty"`
-	StartDate string `json:"start_date,omitempty"`
+	OAuthToken string `json:"oauth_token,omitempty"`
+	ViewID     string `json:"view_id,omitempty"`
+	StartDate  string `json:"start_date,omitempty"`
 }
 
 const layout = "2006-01-02"

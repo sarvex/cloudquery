@@ -28,14 +28,16 @@ func genDates(ctx context.Context, c *client.Client, table string) (<-chan strin
 	}
 
 	ch := make(chan string)
-	defer close(ch)
+	go func() {
+		defer close(ch)
 
-	today := time.Now().UTC()
+		today := time.Now().UTC()
 
-	for !t.After(today) {
-		ch <- t.Format(dateLayout)
-		t.Add(24 * time.Hour)
-	}
+		for !t.After(today) {
+			ch <- t.Format(dateLayout)
+			t.Add(24 * time.Hour)
+		}
+	}()
 
 	return ch, nil
 }

@@ -2,12 +2,14 @@ package client
 
 import (
 	"context"
+	"time"
 
 	"github.com/cloudquery/plugin-sdk/backend"
 	"github.com/cloudquery/plugin-sdk/plugins/source"
 	"github.com/cloudquery/plugin-sdk/schema"
 	"github.com/cloudquery/plugin-sdk/specs"
 	"github.com/rs/zerolog"
+	"golang.org/x/oauth2"
 	"google.golang.org/api/analyticsreporting/v4"
 	"google.golang.org/api/option"
 )
@@ -48,14 +50,20 @@ func Configure(ctx context.Context, logger zerolog.Logger, srcSpec specs.Source,
 		// we disable telemetry to boost performance and be on the same side with telemetry
 		option.WithTelemetryDisabled(),
 	}
-	if len(spec.APIKey) > 0 {
-		opts = append(opts, option.WithAPIKey(spec.APIKey))
+	if len(spec.OAuthToken) > 0 {
+		opts = append(opts, option.WithTokenSource((&oauth2.Config{}).TokenSource(context.Background(), &oauth2.Token{
+			AccessToken: spec.OAuthToken,
+			TokenType:   "Bearer",
+			Expiry:      time.Now().Add(time.Hour),
+		})))
 	}
 
+	logger.Info().Msg("will create client")
 	svc, err := analyticsreporting.NewService(context.Background(), opts...)
 	if err != nil {
 		return nil, err
 	}
+	logger.Info().Msg("created client")
 
 	svc.UserAgent = "cloudquery:source-google-analytics/" + srcSpec.Version
 
