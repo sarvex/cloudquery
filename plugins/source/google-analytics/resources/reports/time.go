@@ -40,16 +40,19 @@ func genDates(ctx context.Context, c *client.Client, table string) (<-chan strin
 	return ch, nil
 }
 
-// https://ga-dev-tools.google/dimensions-metrics-explorer/time
+// https://ga-dev-tools.google/ga4/dimensions-metrics-explorer/#Time
 // Other values aren't supported
 var timeFormats = map[string]string{
-	"ga:date":           "20060102",
-	"ga:year":           "2006",
-	"ga:month":          "01",
-	"ga:hour":           "03",
-	"ga:minute":         "04",
-	"ga:dateHour":       "2006010203",
-	"ga:dateHourMinute": "200601020304",
+	"date":           "20060102",
+	"dateHour":       "2006010203",
+	"dateHourMinute": "200601020304",
+	"day":            "02",
+	"dayOfWeekName":  "Monday",
+	"hour":           "03",
+	"minute":         "04",
+	"month":          "01",
+	"year":           "2006",
+	"yearMonth":      "200601",
 }
 
 // TODO: make sure the zone is returned correctly?
