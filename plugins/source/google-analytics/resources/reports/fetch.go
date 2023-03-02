@@ -29,8 +29,7 @@ func fetch(tableName string, request *analyticsreporting.ReportRequest) schema.T
 		}
 
 		for date := range dates {
-			dateStr := date.Format(dateLayout)
-			request.DateRanges = []*analyticsreporting.DateRange{{StartDate: dateStr, EndDate: dateStr}}
+			request.DateRanges = []*analyticsreporting.DateRange{{StartDate: date, EndDate: date}}
 
 			for {
 				resp, err := batchGetReq.Do()
