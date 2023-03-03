@@ -43,7 +43,7 @@ func Configure(ctx context.Context, logger zerolog.Logger, srcSpec specs.Source,
 		return nil, err
 	}
 
-	tokenSource, err := getTokenSource(ctx, &logger)
+	tokenSource, err := spec.OAuth.getTokenSource(ctx)
 	if err != nil {
 		return nil, err
 	}

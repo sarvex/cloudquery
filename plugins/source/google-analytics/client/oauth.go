@@ -4,27 +4,52 @@ import (
 	"context"
 	"crypto/rand"
 	"encoding/base64"
+	"fmt"
 	"net"
 	"net/http"
 	"os/exec"
+	"time"
 
-	"github.com/rs/zerolog"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
 	"google.golang.org/api/analyticsreporting/v4"
 )
 
-func getTokenSource(ctx context.Context, l *zerolog.Logger) (oauth2.TokenSource, error) {
+type oauthSpec struct {
+	APIKey       string `json:"api_key,omitempty"`
+	ClientID     string `json:"client_id,omitempty"`
+	ClientSecret string `json:"client_secret,omitempty"`
+}
+
+func (o *oauthSpec) validate() error {
+	if o == nil {
+		return fmt.Errorf("nil oauth spec")
+	}
+
+	switch {
+	case len(o.APIKey) > 0:
+		return nil
+	case len(o.ClientID) == 0:
+		return fmt.Errorf("empty client_id in oauth spec")
+	case len(o.ClientSecret) == 0:
+		return fmt.Errorf("empty client_secret in oauth spec")
+	default:
+		return nil
+	}
+}
+func (o *oauthSpec) getTokenSource(ctx context.Context) (oauth2.TokenSource, error) {
+	if len(o.APIKey) > 0 {
+		return oauth2.StaticTokenSource(&oauth2.Token{AccessToken: o.APIKey, Expiry: time.Now().Add(24 * time.Hour)}), nil
+	}
+
 	lst, err := net.Listen("tcp4", "127.0.0.1:0")
 	if err != nil {
 		return nil, err
 	}
 
-	l.Info().Str("addr", lst.Addr().String()).Msg("will listen")
-
 	config := &oauth2.Config{
-		ClientID:     "cloudquery-google-analytics-source-plugin",
-		ClientSecret: "we_really_dont_care",
+		ClientID:     o.ClientID,
+		ClientSecret: o.ClientSecret,
 		Endpoint:     google.Endpoint,
 		RedirectURL:  "http://" + lst.Addr().String(),
 		Scopes:       []string{analyticsreporting.AnalyticsReadonlyScope},
@@ -35,9 +60,8 @@ func getTokenSource(ctx context.Context, l *zerolog.Logger) (oauth2.TokenSource,
 	state := base64.URLEncoding.EncodeToString(b)
 
 	handler := &oauthHandler{
-		state:  state,
-		err:    make(chan error),
-		logger: l,
+		state: state,
+		err:   make(chan error),
 	}
 
 	srv := http.Server{Handler: handler}
@@ -52,14 +76,12 @@ func getTokenSource(ctx context.Context, l *zerolog.Logger) (oauth2.TokenSource,
 		return nil, serveErr
 	}
 
-	l.Info().Err(err).Msg("served")
 	if err != nil {
 		return nil, err
 	}
 
 	// we have exchange token now
 	token, err := config.Exchange(ctx, handler.code, oauth2.AccessTypeOffline)
-	l.Info().Err(err).Str("token", token.AccessToken).Msg("got tok")
 	if err != nil {
 		return nil, err
 	}
@@ -68,14 +90,12 @@ func getTokenSource(ctx context.Context, l *zerolog.Logger) (oauth2.TokenSource,
 }
 
 type oauthHandler struct {
-	state  string
-	err    chan error
-	code   string
-	logger *zerolog.Logger
+	state string
+	err   chan error
+	code  string
 }
 
 func (o *oauthHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	o.logger.Info().Str("code", r.FormValue("code")).Msg("got code")
 	//TODO implement me
 	panic("implement me")
 }

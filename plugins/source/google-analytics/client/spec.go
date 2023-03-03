@@ -6,6 +6,7 @@ import (
 )
 
 type Spec struct {
+	OAuth *oauthSpec `json:"oauth,omitempty"`
 	//OAuthToken string `json:"oauth_token,omitempty"`
 	ViewID    string `json:"view_id,omitempty"`
 	StartDate string `json:"start_date,omitempty"`
@@ -30,5 +31,5 @@ func (s *Spec) validate() error {
 		return fmt.Errorf(`"start_date" has to be in %q format, got %q: %w`, layout, s.StartDate, err)
 	}
 
-	return nil
+	return s.OAuth.validate()
 }
