@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.1.4](https://github.com/cloudquery/cloudquery/compare/plugins-destination-gcs-v2.1.3...plugins-destination-gcs-v2.1.4) (2023-03-05)
+
+
+### Bug Fixes
+
+* **deps:** Update module cloud.google.com/go to v0.110.0 ([#8628](https://github.com/cloudquery/cloudquery/issues/8628)) ([eb755b8](https://github.com/cloudquery/cloudquery/commit/eb755b82563a1068abd619cbe6b0004e0af5846b))
+* **deps:** Update module github.com/cloudquery/plugin-sdk to v1.41.0 ([#8682](https://github.com/cloudquery/cloudquery/issues/8682)) ([ea9d065](https://github.com/cloudquery/cloudquery/commit/ea9d065ae9f77c6dd990570974630ae6ac3f153e))
+* **deps:** Update module github.com/googleapis/enterprise-certificate-proxy to v0.2.3 ([#8571](https://github.com/cloudquery/cloudquery/issues/8571)) ([3ea55e8](https://github.com/cloudquery/cloudquery/commit/3ea55e8cf1ce27f9637b0d7825655a2b00d4ad4c))
+* **deps:** Update module github.com/pierrec/lz4/v4 to v4.1.17 ([#8623](https://github.com/cloudquery/cloudquery/issues/8623)) ([fd968d8](https://github.com/cloudquery/cloudquery/commit/fd968d8938e8b603f2e9f6405eac2409ac41636b))
+* **deps:** Update module github.com/stretchr/testify to v1.8.2 ([#8599](https://github.com/cloudquery/cloudquery/issues/8599)) ([2ec8086](https://github.com/cloudquery/cloudquery/commit/2ec808677328410cc96c97a693ef65022d314c32))
+
 ## [2.1.3](https://github.com/cloudquery/cloudquery/compare/plugins-destination-gcs-v2.1.2...plugins-destination-gcs-v2.1.3) (2023-02-28)
 
 
