@@ -5,6 +5,30 @@ All notable changes to this provider will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.0.0](https://github.com/cloudquery/cloudquery/compare/plugins-source-azure-v4.3.0...plugins-source-azure-v5.0.0) (2023-03-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* **azure-resources:** Remove `azure_azuredata_sql_server_registrations` since the API to sync it is deprecated. You should use the tables under `azurearcdata`, `azure_azurearcdata_sql_server_instances`, `azure_azurearcdata_postgres_instances` or `azure_azurearcdata_sql_managed_instances` to get the most up to date information. See more in this [Azure Go SDK issue comment](https://github.com/Azure/azure-sdk-for-go/issues/19789#issuecomment-1438803340).
+
+### Features
+
+* Add tables search box ([#8672](https://github.com/cloudquery/cloudquery/issues/8672)) ([342b0c5](https://github.com/cloudquery/cloudquery/commit/342b0c569fd28ee26ea3e09ec6d787f85c49f16c))
+
+
+### Bug Fixes
+
+* **azure-resources:** Remove `azure_azuredata_sql_server_registrations` ([977137e](https://github.com/cloudquery/cloudquery/commit/977137ec69fb6eb0e8fa086bfd155f579df6ec0a))
+* **deps:** Update golang.org/x/exp digest to c95f2b4 ([#8560](https://github.com/cloudquery/cloudquery/issues/8560)) ([9c3bd5b](https://github.com/cloudquery/cloudquery/commit/9c3bd5b68f9741a360fde6c54bf3f5f3efe06d9e))
+* **deps:** Update module github.com/Azure/azure-sdk-for-go/sdk/azcore to v1.3.1 ([#8567](https://github.com/cloudquery/cloudquery/issues/8567)) ([d17e2aa](https://github.com/cloudquery/cloudquery/commit/d17e2aa63e8258ecc3c6815431222d1c5f0a06bf))
+* **deps:** Update module github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/cognitiveservices/armcognitiveservices to v1.3.0 ([#8648](https://github.com/cloudquery/cloudquery/issues/8648)) ([7639032](https://github.com/cloudquery/cloudquery/commit/763903218170ee89323bb0d9d6567d8e2fec5abf))
+* **deps:** Update module github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/cosmos/armcosmos/v2 to v2.2.0 ([#8649](https://github.com/cloudquery/cloudquery/issues/8649)) ([261aa9c](https://github.com/cloudquery/cloudquery/commit/261aa9c8b5dba8d315862126c00f4d0d1c136b81))
+* **deps:** Update module github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/datafactory/armdatafactory/v3 to v3.1.0 ([#8650](https://github.com/cloudquery/cloudquery/issues/8650)) ([359da21](https://github.com/cloudquery/cloudquery/commit/359da2150303db05402132ed222f63fc9c711d3f))
+* **deps:** Update module github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/kusto/armkusto to v1.2.0 ([#8651](https://github.com/cloudquery/cloudquery/issues/8651)) ([036adc7](https://github.com/cloudquery/cloudquery/commit/036adc7caf2da5607a3da486371c5d5fa1fb32f3))
+* **deps:** Update module github.com/cloudquery/plugin-sdk to v1.41.0 ([#8682](https://github.com/cloudquery/cloudquery/issues/8682)) ([ea9d065](https://github.com/cloudquery/cloudquery/commit/ea9d065ae9f77c6dd990570974630ae6ac3f153e))
+* **deps:** Update module github.com/stretchr/testify to v1.8.2 ([#8599](https://github.com/cloudquery/cloudquery/issues/8599)) ([2ec8086](https://github.com/cloudquery/cloudquery/commit/2ec808677328410cc96c97a693ef65022d314c32))
+
 ## [4.3.0](https://github.com/cloudquery/cloudquery/compare/plugins-source-azure-v4.2.0...plugins-source-azure-v4.3.0) (2023-02-28)
 
 
