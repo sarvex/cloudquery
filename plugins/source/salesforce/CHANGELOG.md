@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/cloudquery/cloudquery/compare/plugins-source-salesforce-v1.0.10...plugins-source-salesforce-v1.1.0) (2023-03-05)
+
+
+### Features
+
+* Add tables search box ([#8672](https://github.com/cloudquery/cloudquery/issues/8672)) ([342b0c5](https://github.com/cloudquery/cloudquery/commit/342b0c569fd28ee26ea3e09ec6d787f85c49f16c))
+
+
+### Bug Fixes
+
+* **deps:** Update module github.com/cloudquery/plugin-sdk to v1.41.0 ([#8682](https://github.com/cloudquery/cloudquery/issues/8682)) ([ea9d065](https://github.com/cloudquery/cloudquery/commit/ea9d065ae9f77c6dd990570974630ae6ac3f153e))
+* **deps:** Update module github.com/stretchr/testify to v1.8.2 ([#8599](https://github.com/cloudquery/cloudquery/issues/8599)) ([2ec8086](https://github.com/cloudquery/cloudquery/commit/2ec808677328410cc96c97a693ef65022d314c32))
+
 ## [1.0.10](https://github.com/cloudquery/cloudquery/compare/plugins-source-salesforce-v1.0.9...plugins-source-salesforce-v1.0.10) (2023-02-28)
 
 
