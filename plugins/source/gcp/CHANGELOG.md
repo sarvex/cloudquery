@@ -5,6 +5,23 @@ All notable changes to this provider will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [8.4.0](https://github.com/cloudquery/cloudquery/compare/plugins-source-gcp-v8.3.0...plugins-source-gcp-v8.4.0) (2023-03-05)
+
+
+### Features
+
+* Add tables search box ([#8672](https://github.com/cloudquery/cloudquery/issues/8672)) ([342b0c5](https://github.com/cloudquery/cloudquery/commit/342b0c569fd28ee26ea3e09ec6d787f85c49f16c))
+* **gcp-resources:** Add Compute Machine Types ([#8674](https://github.com/cloudquery/cloudquery/issues/8674)) ([9a680c6](https://github.com/cloudquery/cloudquery/commit/9a680c602cb4d1e56d4c1fe7ae7fa284715d0954))
+
+
+### Bug Fixes
+
+* **deps:** Update golang.org/x/exp digest to c95f2b4 ([#8560](https://github.com/cloudquery/cloudquery/issues/8560)) ([9c3bd5b](https://github.com/cloudquery/cloudquery/commit/9c3bd5b68f9741a360fde6c54bf3f5f3efe06d9e))
+* **deps:** Update module cloud.google.com/go to v0.110.0 ([#8628](https://github.com/cloudquery/cloudquery/issues/8628)) ([eb755b8](https://github.com/cloudquery/cloudquery/commit/eb755b82563a1068abd619cbe6b0004e0af5846b))
+* **deps:** Update module github.com/googleapis/enterprise-certificate-proxy to v0.2.3 ([#8571](https://github.com/cloudquery/cloudquery/issues/8571)) ([3ea55e8](https://github.com/cloudquery/cloudquery/commit/3ea55e8cf1ce27f9637b0d7825655a2b00d4ad4c))
+* **deps:** Update module github.com/stretchr/testify to v1.8.2 ([#8599](https://github.com/cloudquery/cloudquery/issues/8599)) ([2ec8086](https://github.com/cloudquery/cloudquery/commit/2ec808677328410cc96c97a693ef65022d314c32))
+* **services:** Update GCP Services ([#8673](https://github.com/cloudquery/cloudquery/issues/8673)) ([0c05424](https://github.com/cloudquery/cloudquery/commit/0c0542402153c9214dce67fbea4a8ea2bbe7447d))
+
 ## [8.3.0](https://github.com/cloudquery/cloudquery/compare/plugins-source-gcp-v8.2.0...plugins-source-gcp-v8.3.0) (2023-02-28)
 
 
