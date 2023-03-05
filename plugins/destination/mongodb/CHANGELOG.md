@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.2](https://github.com/cloudquery/cloudquery/compare/plugins-destination-mongodb-v1.1.1...plugins-destination-mongodb-v1.1.2) (2023-03-05)
+
+
+### Bug Fixes
+
+* **deps:** Update module github.com/cloudquery/plugin-sdk to v1.41.0 ([#8682](https://github.com/cloudquery/cloudquery/issues/8682)) ([ea9d065](https://github.com/cloudquery/cloudquery/commit/ea9d065ae9f77c6dd990570974630ae6ac3f153e))
+* **deps:** Update module github.com/stretchr/testify to v1.8.2 ([#8599](https://github.com/cloudquery/cloudquery/issues/8599)) ([2ec8086](https://github.com/cloudquery/cloudquery/commit/2ec808677328410cc96c97a693ef65022d314c32))
+* **deps:** Update module go.mongodb.org/mongo-driver to v1.11.2 ([#8600](https://github.com/cloudquery/cloudquery/issues/8600)) ([dc5cac8](https://github.com/cloudquery/cloudquery/commit/dc5cac8afbfa03b0fe84b1a8ab04c725901dd935))
+
 ## [1.1.1](https://github.com/cloudquery/cloudquery/compare/plugins-destination-mongodb-v1.1.0...plugins-destination-mongodb-v1.1.1) (2023-02-28)
 
 
