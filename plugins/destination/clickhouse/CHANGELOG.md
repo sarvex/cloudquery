@@ -1,5 +1,37 @@
 # Changelog
 
+## [3.1.1](https://github.com/cloudquery/cloudquery/compare/plugins-destination-clickhouse-v3.1.0...plugins-destination-clickhouse-v3.1.1) (2023-05-18)
+
+
+### Bug Fixes
+
+* Upgrade to plugin-sdk v3.5.2 (Fixes delete-stale for incremental tables) ([#10854](https://github.com/cloudquery/cloudquery/issues/10854)) ([96c17c7](https://github.com/cloudquery/cloudquery/commit/96c17c7ea4a2a455cc3fa52728d818c87e0cff33))
+
+## [3.1.0](https://github.com/cloudquery/cloudquery/compare/plugins-destination-clickhouse-v3.0.0...plugins-destination-clickhouse-v3.1.0) (2023-05-18)
+
+
+### Features
+
+* **clickhouse:** Migrate to `github.com/cloudquery/plugin-sdk/v3` ([#10807](https://github.com/cloudquery/cloudquery/issues/10807)) ([e0edde7](https://github.com/cloudquery/cloudquery/commit/e0edde7e86956c5fce12cf47bbbe9394d4043652)), closes [#10714](https://github.com/cloudquery/cloudquery/issues/10714)
+
+
+### Bug Fixes
+
+* **deps:** Update module github.com/cloudquery/plugin-pb-go to v1.0.8 ([#10798](https://github.com/cloudquery/cloudquery/issues/10798)) ([27ff430](https://github.com/cloudquery/cloudquery/commit/27ff430527932d59a4d488a6767547eda8853940))
+
+## [3.0.0](https://github.com/cloudquery/cloudquery/compare/plugins-destination-clickhouse-v2.0.1...plugins-destination-clickhouse-v3.0.0) (2023-05-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* This change enables [`allow_nullable_key`](https://clickhouse.com/docs/en/operations/settings/settings#allow-nullable-key) for tables ([#10284](https://github.com/cloudquery/cloudquery/issues/10284)).
+
+### Features
+
+* Allow nullable columns in primary keys ([#10284](https://github.com/cloudquery/cloudquery/issues/10284)) ([26e7d0e](https://github.com/cloudquery/cloudquery/commit/26e7d0e9deb5eb2709e3df605a008e8dba4d6552))
+* **deps:** Upgrade to Apache Arrow v13 (latest `cqmain`) ([#10605](https://github.com/cloudquery/cloudquery/issues/10605)) ([a55da3d](https://github.com/cloudquery/cloudquery/commit/a55da3dbefafdc68a6bda2d5f1d334d12dd97b97))
+* Update to use [Apache Arrow](https://arrow.apache.org/) type system ([#10284](https://github.com/cloudquery/cloudquery/issues/10284)) ([26e7d0e](https://github.com/cloudquery/cloudquery/commit/26e7d0e9deb5eb2709e3df605a008e8dba4d6552))
+
 ## [2.0.1](https://github.com/cloudquery/cloudquery/compare/plugins-destination-clickhouse-v2.0.0...plugins-destination-clickhouse-v2.0.1) (2023-04-25)
 
 

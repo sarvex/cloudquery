@@ -8,6 +8,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/accessanalyzer"
 	"github.com/aws/aws-sdk-go-v2/service/account"
 	"github.com/aws/aws-sdk-go-v2/service/acm"
+	"github.com/aws/aws-sdk-go-v2/service/acmpca"
 	"github.com/aws/aws-sdk-go-v2/service/amp"
 	"github.com/aws/aws-sdk-go-v2/service/amplify"
 	"github.com/aws/aws-sdk-go-v2/service/apigateway"
@@ -73,6 +74,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/mq"
 	"github.com/aws/aws-sdk-go-v2/service/mwaa"
 	"github.com/aws/aws-sdk-go-v2/service/neptune"
+	"github.com/aws/aws-sdk-go-v2/service/networkfirewall"
 	"github.com/aws/aws-sdk-go-v2/service/organizations"
 	"github.com/aws/aws-sdk-go-v2/service/qldb"
 	"github.com/aws/aws-sdk-go-v2/service/quicksight"
@@ -117,6 +119,7 @@ var clients = []any{
 	&accessanalyzer.Client{},
 	&account.Client{},
 	&acm.Client{},
+	&acmpca.Client{},
 	&amp.Client{},
 	&amplify.Client{},
 	&apigateway.Client{},
@@ -182,6 +185,7 @@ var clients = []any{
 	&mq.Client{},
 	&mwaa.Client{},
 	&neptune.Client{},
+	&networkfirewall.Client{},
 	&organizations.Client{},
 	&qldb.Client{},
 	&quicksight.Client{},

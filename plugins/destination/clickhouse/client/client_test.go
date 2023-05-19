@@ -6,8 +6,8 @@ import (
 	"testing"
 
 	"github.com/cloudquery/cloudquery/plugins/destination/clickhouse/resources/plugin"
-	"github.com/cloudquery/plugin-sdk/plugins/destination"
-	"github.com/cloudquery/plugin-sdk/specs"
+	"github.com/cloudquery/plugin-pb-go/specs"
+	"github.com/cloudquery/plugin-sdk/v3/plugins/destination"
 )
 
 var migrateStrategy = destination.MigrateStrategy{
@@ -50,8 +50,7 @@ func TestPlugin(t *testing.T) {
 			SkipMigrateOverwrite:      true,
 			SkipMigrateOverwriteForce: true,
 
-			MigrateStrategyOverwrite: migrateStrategy,
-			MigrateStrategyAppend:    migrateStrategy,
+			MigrateStrategyAppend: migrateStrategy,
 		},
 	)
 }

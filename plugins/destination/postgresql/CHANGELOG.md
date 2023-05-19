@@ -1,5 +1,35 @@
 # Changelog
 
+## [4.1.1](https://github.com/cloudquery/cloudquery/compare/plugins-destination-postgresql-v4.1.0...plugins-destination-postgresql-v4.1.1) (2023-05-18)
+
+
+### Bug Fixes
+
+* Upgrade to plugin-sdk v3.5.2 (Fixes delete-stale for incremental tables) ([#10851](https://github.com/cloudquery/cloudquery/issues/10851)) ([244e9a4](https://github.com/cloudquery/cloudquery/commit/244e9a4cc50d216d85462fc60331ec71239152c3))
+
+## [4.1.0](https://github.com/cloudquery/cloudquery/compare/plugins-destination-postgresql-v4.0.5...plugins-destination-postgresql-v4.1.0) (2023-05-18)
+
+
+### Features
+
+* **deps:** Upgrade to Apache Arrow v13 (latest `cqmain`) ([#10605](https://github.com/cloudquery/cloudquery/issues/10605)) ([a55da3d](https://github.com/cloudquery/cloudquery/commit/a55da3dbefafdc68a6bda2d5f1d334d12dd97b97))
+* **postgresql:** Update PG to SDK V3 native arrow support ([#10783](https://github.com/cloudquery/cloudquery/issues/10783)) ([d242030](https://github.com/cloudquery/cloudquery/commit/d242030204c90b0f916b123926d242d71fc14c4e))
+
+
+### Bug Fixes
+
+* **deps:** Update module github.com/cloudquery/plugin-pb-go to v1.0.8 ([#10798](https://github.com/cloudquery/cloudquery/issues/10798)) ([27ff430](https://github.com/cloudquery/cloudquery/commit/27ff430527932d59a4d488a6767547eda8853940))
+
+## [4.0.5](https://github.com/cloudquery/cloudquery/compare/plugins-destination-postgresql-v4.0.4...plugins-destination-postgresql-v4.0.5) (2023-05-02)
+
+
+### Bug Fixes
+
+* **deps:** Update github.com/apache/arrow/go/v12 digest to 0ea1a10 ([#10461](https://github.com/cloudquery/cloudquery/issues/10461)) ([022709f](https://github.com/cloudquery/cloudquery/commit/022709f710cc6d95aee60260d6f58991698bbf42))
+* **deps:** Update module github.com/cloudquery/plugin-sdk/v2 to v2.5.1 ([#10448](https://github.com/cloudquery/cloudquery/issues/10448)) ([cc85b93](https://github.com/cloudquery/cloudquery/commit/cc85b939fe945939caf72f8c08095e1e744b9ee8))
+* **postgresql:** Consistent migration for append mode ([#10425](https://github.com/cloudquery/cloudquery/issues/10425)) ([4a68706](https://github.com/cloudquery/cloudquery/commit/4a68706d62bfb6960db09723e373b1371de00ec6))
+* **postgresql:** Reserved Keywords Caused Migration failure ([#10471](https://github.com/cloudquery/cloudquery/issues/10471)) ([b2c4cca](https://github.com/cloudquery/cloudquery/commit/b2c4ccae0d70d1a12578700c96b196ee6176a9fa))
+
 ## [4.0.4](https://github.com/cloudquery/cloudquery/compare/plugins-destination-postgresql-v4.0.3...plugins-destination-postgresql-v4.0.4) (2023-04-25)
 
 

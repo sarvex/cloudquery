@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.8.0](https://github.com/cloudquery/cloudquery/compare/scaffold-v1.7.0...scaffold-v1.8.0) (2023-05-18)
+
+
+### Features
+
+* **deps:** Upgrade to Apache Arrow v13 (latest `cqmain`) ([#10605](https://github.com/cloudquery/cloudquery/issues/10605)) ([a55da3d](https://github.com/cloudquery/cloudquery/commit/a55da3dbefafdc68a6bda2d5f1d334d12dd97b97))
+
+## [1.7.0](https://github.com/cloudquery/cloudquery/compare/scaffold-v1.6.7...scaffold-v1.7.0) (2023-05-02)
+
+
+### Features
+
+* Migrate scaffold to plugin-sdk v2 ([#10377](https://github.com/cloudquery/cloudquery/issues/10377)) ([62f26a8](https://github.com/cloudquery/cloudquery/commit/62f26a8d5c3f27eda196ca4192df23a85caf54cb))
+
+
+### Bug Fixes
+
+* **deps:** Update module github.com/cloudquery/plugin-sdk/v2 to v2.5.0 ([#10390](https://github.com/cloudquery/cloudquery/issues/10390)) ([f706688](https://github.com/cloudquery/cloudquery/commit/f706688b2f5b8393d09d57020d31fb1d280f0dbd))
+* **deps:** Update module github.com/cloudquery/plugin-sdk/v2 to v2.5.1 ([#10448](https://github.com/cloudquery/cloudquery/issues/10448)) ([cc85b93](https://github.com/cloudquery/cloudquery/commit/cc85b939fe945939caf72f8c08095e1e744b9ee8))
+
 ## [1.6.7](https://github.com/cloudquery/cloudquery/compare/scaffold-v1.6.6...scaffold-v1.6.7) (2023-04-25)
 
 

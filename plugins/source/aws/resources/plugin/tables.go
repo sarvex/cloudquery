@@ -4,6 +4,7 @@ import (
 	"github.com/cloudquery/cloudquery/plugins/source/aws/resources/services/accessanalyzer"
 	"github.com/cloudquery/cloudquery/plugins/source/aws/resources/services/account"
 	"github.com/cloudquery/cloudquery/plugins/source/aws/resources/services/acm"
+	"github.com/cloudquery/cloudquery/plugins/source/aws/resources/services/acmpca"
 	"github.com/cloudquery/cloudquery/plugins/source/aws/resources/services/amp"
 	"github.com/cloudquery/cloudquery/plugins/source/aws/resources/services/amplify"
 	"github.com/cloudquery/cloudquery/plugins/source/aws/resources/services/apigateway"
@@ -68,6 +69,7 @@ import (
 	"github.com/cloudquery/cloudquery/plugins/source/aws/resources/services/mq"
 	"github.com/cloudquery/cloudquery/plugins/source/aws/resources/services/mwaa"
 	"github.com/cloudquery/cloudquery/plugins/source/aws/resources/services/neptune"
+	"github.com/cloudquery/cloudquery/plugins/source/aws/resources/services/networkfirewall"
 	"github.com/cloudquery/cloudquery/plugins/source/aws/resources/services/organizations"
 	"github.com/cloudquery/cloudquery/plugins/source/aws/resources/services/qldb"
 	"github.com/cloudquery/cloudquery/plugins/source/aws/resources/services/quicksight"
@@ -109,6 +111,7 @@ func tables() []*schema.Table {
 		account.AlternateContacts(),
 		account.Contacts(),
 		acm.Certificates(),
+		acmpca.CertificateAuthorities(),
 		amp.Workspaces(),
 		amplify.Apps(),
 		apigateway.ApiKeys(),
@@ -176,9 +179,11 @@ func tables() []*schema.Table {
 		computeoptimizer.EnrollmentStatuses(),
 		computeoptimizer.LambdaFunctionsRecommendations(),
 		config.ConfigRules(),
+		config.ConfigurationAggregators(),
 		config.ConfigurationRecorders(),
 		config.ConformancePacks(),
 		config.DeliveryChannels(),
+		config.RetentionConfigurations(),
 		costexplorer.ThirtyDayCost(),
 		costexplorer.ThirtyDayCostForecast(),
 		dax.Clusters(),
@@ -248,6 +253,7 @@ func tables() []*schema.Table {
 		ecrpublic.Repositories(),
 		ecs.Clusters(),
 		ecs.TaskDefinitions(),
+		efs.AccessPoints(),
 		efs.Filesystems(),
 		eks.Clusters(),
 		elasticache.Clusters(),
@@ -377,6 +383,8 @@ func tables() []*schema.Table {
 		neptune.GlobalClusters(),
 		neptune.Instances(),
 		neptune.SubnetGroups(),
+		networkfirewall.FirewallPolicies(),
+		networkfirewall.RuleGroups(),
 		organizations.Accounts(),
 		organizations.DelegatedAdministrators(),
 		organizations.OrganizationalUnits(),
@@ -441,7 +449,9 @@ func tables() []*schema.Table {
 		scheduler.ScheduleGroups(),
 		scheduler.Schedules(),
 		secretsmanager.Secrets(),
+		securityhub.EnabledStandards(),
 		securityhub.Findings(),
+		securityhub.Hubs(),
 		servicecatalog.Portfolios(),
 		servicecatalog.Products(),
 		servicecatalog.ProvisionedProducts(),

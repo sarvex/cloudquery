@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.3.0](https://github.com/cloudquery/cloudquery/compare/plugins-source-mixpanel-v1.2.2...plugins-source-mixpanel-v1.3.0) (2023-05-16)
+
+
+### Features
+
+* **deps:** Upgrade to Apache Arrow v13 (latest `cqmain`) ([#10605](https://github.com/cloudquery/cloudquery/issues/10605)) ([a55da3d](https://github.com/cloudquery/cloudquery/commit/a55da3dbefafdc68a6bda2d5f1d334d12dd97b97))
+* Update mixpanel error message for terminated early ([#10637](https://github.com/cloudquery/cloudquery/issues/10637)) ([efc7211](https://github.com/cloudquery/cloudquery/commit/efc7211608835d29347f6e581add05a059feb557))
+
+
+### Bug Fixes
+
+* **deps:** Update module github.com/cloudquery/plugin-pb-go to v1.0.8 ([#10798](https://github.com/cloudquery/cloudquery/issues/10798)) ([27ff430](https://github.com/cloudquery/cloudquery/commit/27ff430527932d59a4d488a6767547eda8853940))
+
+## [1.2.2](https://github.com/cloudquery/cloudquery/compare/plugins-source-mixpanel-v1.2.1...plugins-source-mixpanel-v1.2.2) (2023-05-09)
+
+
+### Bug Fixes
+
+* Add line content to error message in mixpanel export table ([#10607](https://github.com/cloudquery/cloudquery/issues/10607)) ([97dd650](https://github.com/cloudquery/cloudquery/commit/97dd650728af4b23ccb4af38b4cb53307365c6e4))
+
+## [1.2.1](https://github.com/cloudquery/cloudquery/compare/plugins-source-mixpanel-v1.2.0...plugins-source-mixpanel-v1.2.1) (2023-05-02)
+
+
+### Bug Fixes
+
+* **deps:** Update github.com/apache/arrow/go/v12 digest to 0ea1a10 ([#10461](https://github.com/cloudquery/cloudquery/issues/10461)) ([022709f](https://github.com/cloudquery/cloudquery/commit/022709f710cc6d95aee60260d6f58991698bbf42))
+* **deps:** Update module github.com/cloudquery/plugin-sdk/v2 to v2.5.0 ([#10390](https://github.com/cloudquery/cloudquery/issues/10390)) ([f706688](https://github.com/cloudquery/cloudquery/commit/f706688b2f5b8393d09d57020d31fb1d280f0dbd))
+* **deps:** Update module github.com/cloudquery/plugin-sdk/v2 to v2.5.1 ([#10448](https://github.com/cloudquery/cloudquery/issues/10448)) ([cc85b93](https://github.com/cloudquery/cloudquery/commit/cc85b939fe945939caf72f8c08095e1e744b9ee8))
+
 ## [1.2.0](https://github.com/cloudquery/cloudquery/compare/plugins-source-mixpanel-v1.1.4...plugins-source-mixpanel-v1.2.0) (2023-04-25)
 
 

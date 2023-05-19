@@ -5,6 +5,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/accessanalyzer"
 	"github.com/aws/aws-sdk-go-v2/service/account"
 	"github.com/aws/aws-sdk-go-v2/service/acm"
+	"github.com/aws/aws-sdk-go-v2/service/acmpca"
 	"github.com/aws/aws-sdk-go-v2/service/amp"
 	"github.com/aws/aws-sdk-go-v2/service/amplify"
 	"github.com/aws/aws-sdk-go-v2/service/apigateway"
@@ -70,6 +71,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/mq"
 	"github.com/aws/aws-sdk-go-v2/service/mwaa"
 	"github.com/aws/aws-sdk-go-v2/service/neptune"
+	"github.com/aws/aws-sdk-go-v2/service/networkfirewall"
 	"github.com/aws/aws-sdk-go-v2/service/organizations"
 	"github.com/aws/aws-sdk-go-v2/service/qldb"
 	"github.com/aws/aws-sdk-go-v2/service/quicksight"
@@ -106,7 +108,6 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/wafv2"
 	"github.com/aws/aws-sdk-go-v2/service/workspaces"
 	"github.com/aws/aws-sdk-go-v2/service/xray"
-	"github.com/cloudquery/cloudquery/plugins/source/aws/client/models/s3manager"
 	"github.com/cloudquery/cloudquery/plugins/source/aws/client/services"
 )
 
@@ -117,6 +118,7 @@ func initServices(region string, c aws.Config) Services {
 		Accessanalyzer:            accessanalyzer.NewFromConfig(awsCfg),
 		Account:                   account.NewFromConfig(awsCfg),
 		Acm:                       acm.NewFromConfig(awsCfg),
+		Acmpca:                    acmpca.NewFromConfig(awsCfg),
 		Amp:                       amp.NewFromConfig(awsCfg),
 		Amplify:                   amplify.NewFromConfig(awsCfg),
 		Apigateway:                apigateway.NewFromConfig(awsCfg),
@@ -182,6 +184,7 @@ func initServices(region string, c aws.Config) Services {
 		Mq:                        mq.NewFromConfig(awsCfg),
 		Mwaa:                      mwaa.NewFromConfig(awsCfg),
 		Neptune:                   neptune.NewFromConfig(awsCfg),
+		Networkfirewall:           networkfirewall.NewFromConfig(awsCfg),
 		Organizations:             organizations.NewFromConfig(awsCfg),
 		Qldb:                      qldb.NewFromConfig(awsCfg),
 		Quicksight:                quicksight.NewFromConfig(awsCfg),
@@ -218,7 +221,6 @@ func initServices(region string, c aws.Config) Services {
 		Wafv2:                     wafv2.NewFromConfig(awsCfg),
 		Workspaces:                workspaces.NewFromConfig(awsCfg),
 		Xray:                      xray.NewFromConfig(awsCfg),
-		S3manager:                 s3manager.NewFromConfig(awsCfg),
 	}
 }
 
@@ -226,6 +228,7 @@ type Services struct {
 	Accessanalyzer            services.AccessanalyzerClient
 	Account                   services.AccountClient
 	Acm                       services.AcmClient
+	Acmpca                    services.AcmpcaClient
 	Amp                       services.AmpClient
 	Amplify                   services.AmplifyClient
 	Apigateway                services.ApigatewayClient
@@ -291,6 +294,7 @@ type Services struct {
 	Mq                        services.MqClient
 	Mwaa                      services.MwaaClient
 	Neptune                   services.NeptuneClient
+	Networkfirewall           services.NetworkfirewallClient
 	Organizations             services.OrganizationsClient
 	Qldb                      services.QldbClient
 	Quicksight                services.QuicksightClient
@@ -327,5 +331,4 @@ type Services struct {
 	Wafv2                     services.Wafv2Client
 	Workspaces                services.WorkspacesClient
 	Xray                      services.XrayClient
-	S3manager                 services.S3managerClient
 }

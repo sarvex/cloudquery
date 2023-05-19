@@ -5,7 +5,7 @@ import (
 	"path"
 	"strings"
 
-	filetypes "github.com/cloudquery/filetypes/v2"
+	"github.com/cloudquery/filetypes/v3"
 )
 
 type Spec struct {
@@ -16,6 +16,7 @@ type Spec struct {
 	Path      string `json:"path,omitempty"`
 	Athena    bool   `json:"athena,omitempty"`
 	TestWrite *bool  `json:"test_write,omitempty"`
+	Endpoint  string `json:"endpoint,omitempty"`
 }
 
 func (s *Spec) SetDefaults() {

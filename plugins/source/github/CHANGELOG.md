@@ -1,5 +1,28 @@
 # Changelog
 
+## [5.2.0](https://github.com/cloudquery/cloudquery/compare/plugins-source-github-v5.1.1...plugins-source-github-v5.2.0) (2023-05-16)
+
+
+### Features
+
+* Add GitHub Enterprise support on GitHub source ([#10776](https://github.com/cloudquery/cloudquery/issues/10776)) ([3bc226b](https://github.com/cloudquery/cloudquery/commit/3bc226bb7d704ee76f71566e9a043b95b164ce05))
+* **deps:** Upgrade to Apache Arrow v13 (latest `cqmain`) ([#10605](https://github.com/cloudquery/cloudquery/issues/10605)) ([a55da3d](https://github.com/cloudquery/cloudquery/commit/a55da3dbefafdc68a6bda2d5f1d334d12dd97b97))
+
+
+### Bug Fixes
+
+* **deps:** Update module github.com/cloudquery/plugin-pb-go to v1.0.8 ([#10798](https://github.com/cloudquery/cloudquery/issues/10798)) ([27ff430](https://github.com/cloudquery/cloudquery/commit/27ff430527932d59a4d488a6767547eda8853940))
+
+## [5.1.1](https://github.com/cloudquery/cloudquery/compare/plugins-source-github-v5.1.0...plugins-source-github-v5.1.1) (2023-05-02)
+
+
+### Bug Fixes
+
+* **deps:** Update github.com/apache/arrow/go/v12 digest to 0ea1a10 ([#10461](https://github.com/cloudquery/cloudquery/issues/10461)) ([022709f](https://github.com/cloudquery/cloudquery/commit/022709f710cc6d95aee60260d6f58991698bbf42))
+* **deps:** Update github.com/beatlabs/github-auth digest to f39a1f0 ([#10464](https://github.com/cloudquery/cloudquery/issues/10464)) ([683aba0](https://github.com/cloudquery/cloudquery/commit/683aba0cb9ee7f49502a488acccb44b6336503c2))
+* **deps:** Update module github.com/cloudquery/plugin-sdk/v2 to v2.5.0 ([#10390](https://github.com/cloudquery/cloudquery/issues/10390)) ([f706688](https://github.com/cloudquery/cloudquery/commit/f706688b2f5b8393d09d57020d31fb1d280f0dbd))
+* **deps:** Update module github.com/cloudquery/plugin-sdk/v2 to v2.5.1 ([#10448](https://github.com/cloudquery/cloudquery/issues/10448)) ([cc85b93](https://github.com/cloudquery/cloudquery/commit/cc85b939fe945939caf72f8c08095e1e744b9ee8))
+
 ## [5.1.0](https://github.com/cloudquery/cloudquery/compare/plugins-source-github-v5.0.1...plugins-source-github-v5.1.0) (2023-04-25)
 
 
